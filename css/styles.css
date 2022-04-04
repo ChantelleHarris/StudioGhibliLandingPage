@@ -1,13 +1,12 @@
 body,html {
     margin: 0;
-    background-color: rgb(54,179,233);
+    background-color: rgb(85,106,91);
     scroll-behavior: smooth;
 }
 
-/* .container {
+.container {
     margin: 50px;
-    padding: 20px;
-} */
+}
 
 .align-left {
     display:flex;
@@ -35,9 +34,16 @@ body,html {
 
 .formatting {
     margin: 50px;
+    font-family: 'Bebas Neue', cursive;
 }
 
-.medium {
+.large-font {
+    font-size: 100px;
+    letter-spacing: 15px;
+    margin: 0;
+}
+
+.medium-font {
     font-size: 20pt;
 }
 
@@ -49,8 +55,6 @@ body,html {
     
     
 }
-
-
 
 .float-right {
     
@@ -64,6 +68,11 @@ body,html {
     margin: 0;
     list-style: none;
     padding: 20px;
+    position: fixed;
+    right: 10px;
+    top: 0px;
+    width: 100vw;
+    background-color: rgb(85,106,91);
 }
 
 #nav li a {
@@ -76,19 +85,9 @@ body,html {
     margin: 0;
 }
 
-#intro .circle {
-    
-   
-    
-    
-    
-}
-
 #howl {
-    background-color: rgb(0,38,39);
-    
+    background-color: rgb(0,38,39);  
 }
-
 
 #spirited {
     background-color: rgb(5,152,206);
@@ -96,4 +95,38 @@ body,html {
 
 #whisper {
     background-color: rgb(110,96,70);
+}
+
+
+.footer-format-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    --fa-animation-duration: 2s; 
+    --fa-fade-opacity: 0.6;
+}
+
+.gap {
+    width: 70px;
+    height: auto;
+}
+.bottom-footer {
+    background-color: rgb(0,38,39);
+    width: 100vw;
+    height: 5vh;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgb(245, 241, 230);
 }

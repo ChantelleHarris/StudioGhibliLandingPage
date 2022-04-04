@@ -44,12 +44,12 @@ let whisperLink = document.getElementById("whisper-link");
 let allLinks = [introLink,howlLink,spiritedLink,whisperLink];
 console.log(allLinks)
 
-for(i = 0; i < allLinks.length; i++) {
-    allLinks[i].addEventListener('click', function scrollSmooth() {
-        navigation.scroll({
-            behavior: "smooth"
-        })
-        console.log('worked')
-    })
-}
+// for(i = 0; i < allLinks.length; i++) {
+//     allLinks[i].addEventListener('click', function scrollSmooth() {
+//         navigation.scroll({
+//             behavior: "smooth"
+//         })
+//         console.log('worked')
+//     })
+// }
 
