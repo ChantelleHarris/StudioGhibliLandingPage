@@ -29,7 +29,7 @@
         <div class="video-div">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/mWI3M7CM72o?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=mWI3M7CM72o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
         </div>
-        <section  id="intro" class="section-format dark-color">
+        <section class="intro section-format dark-color">
             <div class="content-wrapper">
             <h3 class="medium-font">Introduction</h3>
                 <hr class="dark-line">
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </section>
-        <section id="howl" data-movie-type="favorite" class="section-format content-align-right light-color">
+        <section data-movie-type="favorite" class="howl section-format content-align-right light-color">
             <div class="content-wrapper">
                 <h3 class="medium-font">Howl's Moving Castle</h3>
                 <hr class="light-line">
@@ -74,7 +74,7 @@
                 </div>
             </div>
         </section>
-        <section id="spirited" data-movie-type="favorite" class="section-format dark-color">
+        <section data-movie-type="favorite" class="spirited section-format dark-color">
             <div class="content-wrapper">
                 <h3 class="medium-font">Spirited Away</h3>
                 <hr class="dark-line">
@@ -96,7 +96,7 @@
                 </div>
             </div>
         </section>
-        <section id="whisper" data-movie-type="impactful" class="section-format content-align-right light-color">
+        <section data-movie-type="impactful" class="whisper section-format content-align-right light-color">
             <div class="content-wrapper">
                 <h3 class="medium-font">Whisper of the Heart</h3>
                 <hr class="light-line">
@@ -118,27 +118,52 @@
                 </div>
             </div>
         </section>
+        <section>
         <footer class="cool-font green-background footer-format light-color">
             <form class="form-format" action="https://formspree.io/f/xjvlelgo" method="POST">
-                <h3 class="large-font title-animation studio-ghibli-fan"><span>Connect</span></h3>
-                <label>
-                    Your email:<br>
-                    <input type="email" name="email">
+                <h3 id="connect" class="large-font title-animation studio-ghibli-fan"><span>Connect</span></h3>
+                <hr>
+                <label for="name">
+                    What's your name?
+                    <input type="text" id="name">
                 </label>
-                <label><br>
-                    Your message:<br>
-                    <textarea name="message"></textarea>
+                <label>
+                    What's your email?<br>
+                    <input class="light-color" type="email" name="email">
+                </label>
+                <label for="share">Share Your Thoughts</label>
+                <select name="share-thoughts" id="share" size="">
+                    <option value="choose">Choose Your Response Type</option>
+                    <option value="favorite-character">Who is your favorite character & why?</option>
+                    <option value="favorite-movie">Which is your favorite movie & why?</option>
+                    <option value="studio-ghibli">Share anything about Studio Ghibli!</option>
+                    <option value="response">Share your thoughts about what you've read here!</option>
+                    <option value="ask">Ask a Question</option>
+                </select>
+                <label>
+                    Write Your Response Here<br>
+                    <textarea class="light-color" name="message"></textarea>
                 </label>
                 <!-- your other form fields go here -->
                 <button type="submit">Send</button>
+                <hr>
             </form>
             <div class="icons">
-                <a href="https://www.linkedin.com/in/chantelleharris/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl fa-fade gap"></i></a>
-                <a href="https://github.com/ChantelleHarris" target="_blank"><i class="fa-brands fa-github-square fa-2xl fa-fade gap"></i></a>
-                <a href="https://www.facebook.com/WillowSpiritChantelle" target="_blank"><i class="fa-brands fa-facebook-square fa-2xl fa-fade gap"></i></a>
-                <a href="https://www.instagram.com/chantellewillowspirit/" target="_blank"><i class="fa-brands fa-instagram-square fa-2xl fa-fade"></i></a>
+                <a href="https://www.linkedin.com/in/chantelleharris/" target="_blank">
+                    <i class="fa-brands fa-linkedin fa-2xl fa-fade gap"></i>
+                </a>
+                <a href="https://github.com/ChantelleHarris/" target="_blank">
+                    <i class="fa-brands fa-github-square fa-2xl fa-fade gap"></i>
+                </a>
+                <a href="https://www.facebook.com/WillowSpiritChantelle" target="_blank">
+                    <i class="fa-brands fa-facebook-square fa-2xl fa-fade gap"></i>
+                </a>
+                <a href="https://www.instagram.com/chantellewillowspirit/" target="_blank">
+                    <i class="fa-brands fa-instagram-square fa-2xl fa-fade"></i>
+                </a>
             </div>
         </footer>
+    </section>
         </div>
         <div class="bottom-footer title-animation studio-ghibli-fan"><span>#StudioGhibliFan</span></div>
 <script src="js/app.js"></script>  
