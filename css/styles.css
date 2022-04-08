@@ -43,11 +43,6 @@ figcaption a:focus {
     transition: all 0.3s ease-out;
 }
 
-.container {
-    /* margin: 50px; */
-    
-}
-
 .green-background {
     background-color: rgb(85,106,91);
 }
@@ -99,43 +94,45 @@ figcaption a:focus {
     z-index: 1;
 }
 
-#nav li a {
+nav li a {
     text-decoration: none;
     color: rgba(220,228,207);
 }
 
-#nav li a:hover {
+nav li a:hover {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: rgb(0,38,39);
+    transition: all 0.3s ease-out;
+}
+
+.nav-links:hover {
+    background-color: #9bbdb9;
+}
+
+#lastATag:hover {
+    background-color: rgb(0,38,39);
+}
+
+.active {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: rgb(0,38,39);
+    background-color: #9bbdb9;
+    transition: all 0.3s ease-out;
+}
+
+.connect-active {
+    background-color: rgb(0,38,39);
     border: 2px solid black;
     border-radius: 25px;
     padding-left: 15px;
     padding-right: 15px;
     transition: all 0.3s ease-out;
-}
-
-#intro-link:hover {
-    background-color: rgb(222,172,171);
-    color: rgb(0,38,39);
-}
-
-#howl-link:hover {
-    background-color: rgb(0,38,39);
-}
-
-#spirited-link:hover {
-    background-color: rgb(5,152,206);
-    color: rgb(0,38,39);
-    transition: all 0.3s ease-out;
-}
-
-#whisper-link:hover {
-    background-color: rgb(110,96,70);
-    color: rgb(245, 241, 230);
-
-}
-
-#connect-link:hover {
-    background-color: rgb(220,228,207);
-    color: rgb(0,38,39);
 }
 
 /* HEADER */ /* HEADER */ /* HEADER */ /* HEADER */
@@ -159,6 +156,12 @@ figcaption a:focus {
 }
 
 .studio-ghibli-fan {
+    --color-1: #f0ddd3;
+    --color-2: #9bbdb9;
+    --color-3: #d19796;
+}
+
+.connect {
     --color-1: #f0ddd3;
     --color-2: #9bbdb9;
     --color-3: #d19796;
@@ -339,7 +342,7 @@ footer form select:focus {
     outline: none;
     background-color: #0f3235;
     transition: all 0.3s ease-out;
-    color: rgba(220,228,207)
+    color: rgba(220,228,207);
 }
 
 footer form input,textarea,button {
@@ -350,16 +353,17 @@ footer form input,textarea,button {
     padding-left: 5px;
 }
 
-footer form input:hover,textarea:hover {
+footer form label input:hover,textarea:hover {
     padding-left: 10px;
     padding-right: 10px;
     background-color: #9bbdb9;
     transition: all 0.3s ease-out;
 }
 
-footer form input:focus,textarea:focus {
+footer form label input:focus,textarea:focus {
     background-color: #0f3235;
     outline: none;
+    color: rgba(220,228,207);
     transition: all 0.3s ease-out;
 }
 
@@ -425,4 +429,32 @@ footer form button:focus {
     justify-content: center;
     align-items: center;
     border-top: 1px solid rgb(245, 241, 230);
+}
+
+@media(min-width: 300px) and (max-width: 1000px) {
+    
+   
+
+    /* #nav a.hamburger {
+        background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  right: 0;
+  top: 0;
+    } */
+
+    .header-format {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-format {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }

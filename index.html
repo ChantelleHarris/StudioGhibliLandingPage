@@ -9,12 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Bebas+Neue&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e4169b38b8.js" crossorigin="anonymous"></script>
     <title>Studio Ghibli Landing Page</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="container">
         <nav>
             <ul class="green-background" id="nav"></ul>
+            <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+                <i class=" fa-solid fa-bars fa-2xl"></i>
+            </a>
         </nav>
         <br>
         <br>
@@ -29,7 +32,7 @@
         <div class="video-div">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/mWI3M7CM72o?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=mWI3M7CM72o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
         </div>
-        <section class="intro section-format dark-color">
+        <section data-nav="Introduction" class="intro section-format dark-color">
             <div class="content-wrapper">
             <h3 class="medium-font">Introduction</h3>
                 <hr class="dark-line">
@@ -52,7 +55,7 @@
                 </div>
             </div>
         </section>
-        <section data-movie-type="favorite" class="howl section-format content-align-right light-color">
+        <section data-nav="Howl"class="howl section-format content-align-right light-color">
             <div class="content-wrapper">
                 <h3 class="medium-font">Howl's Moving Castle</h3>
                 <hr class="light-line">
@@ -74,7 +77,7 @@
                 </div>
             </div>
         </section>
-        <section data-movie-type="favorite" class="spirited section-format dark-color">
+        <section data-nav="Spirited" class="spirited section-format dark-color">
             <div class="content-wrapper">
                 <h3 class="medium-font">Spirited Away</h3>
                 <hr class="dark-line">
@@ -96,7 +99,7 @@
                 </div>
             </div>
         </section>
-        <section data-movie-type="impactful" class="whisper section-format content-align-right light-color">
+        <section data-nav="Whisper" class="whisper section-format content-align-right light-color">
             <div class="content-wrapper">
                 <h3 class="medium-font">Whisper of the Heart</h3>
                 <hr class="light-line">
@@ -118,31 +121,52 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section data-nav="Marnie" class="intro section-format dark-color">
+            <div class="content-wrapper">
+                <h3 class="medium-font">When Marnie Was There</h3>
+                <hr class="dark-line">
+                <h4>The Legacy of Hayao Miyazaki</h4>
+                <p>Ponyo and Princess Mononoke were seen as a child, and nearly forgotten. I remembered a
+                    moving wolf head, and for many years, I had wanted to know the name of this lost movie.
+                    When I saw the image of Princess Mononoke with the Goddess Wolf, I knew I had to watch 
+                    this movie. I was drawn to it, and, indeed, my intuition was correct. This was the movie
+                    I had long been searching for! So began again my journey through the worlds of Studio Ghibli.
+                    These films are, in two words, imaginative and magical, and so much more. They help us
+                    understand our own nature and our relationships with others, ourselves, and the seen and 
+                    unseen worlds around us.
+                    Next, I'll talk about my top two favorite movies: Howl's Moving Castle and Spirited Away.
+                </p>
+            </div>
+            <div class="circle-wrapper">
+                <div class="circle">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PZq4uuMP8ss?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=PZq4uuMP8ss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                </div>
+            </div>
+        </section>
+        <section data-nav="Connect">
         <footer class="cool-font green-background footer-format light-color">
             <form class="form-format" action="https://formspree.io/f/xjvlelgo" method="POST">
                 <h3 id="connect" class="large-font title-animation studio-ghibli-fan"><span>Connect</span></h3>
                 <hr>
                 <label for="name">
                     What's your name?
-                    <input type="text" id="name">
+                    <input type="text" id="name" name="full name">
                 </label>
                 <label>
                     What's your email?<br>
-                    <input class="light-color" type="email" name="email">
+                    <input type="email" name="email">
                 </label>
                 <label for="share">Share Your Thoughts</label>
-                <select name="share-thoughts" id="share" size="">
+                <select name="share-your-thoughts" id="share" size="">
                     <option value="choose">Choose Your Response Type</option>
                     <option value="favorite-character">Who is your favorite character & why?</option>
                     <option value="favorite-movie">Which is your favorite movie & why?</option>
                     <option value="studio-ghibli">Share anything about Studio Ghibli!</option>
                     <option value="response">Share your thoughts about what you've read here!</option>
-                    <option value="ask">Ask a Question</option>
+                    <option value="ask a question">Ask a Question</option>
                 </select>
                 <label>
                     Write Your Response Here<br>
-                    <textarea class="light-color" name="message"></textarea>
+                    <textarea name="message"></textarea>
                 </label>
                 <!-- your other form fields go here -->
                 <button type="submit">Send</button>
