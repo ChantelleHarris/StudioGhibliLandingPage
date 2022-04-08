@@ -431,30 +431,4 @@ footer form button:focus {
     border-top: 1px solid rgb(245, 241, 230);
 }
 
-@media(min-width: 300px) and (max-width: 1000px) {
-    
-   
 
-    /* #nav a.hamburger {
-        background-color: black;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  right: 0;
-  top: 0;
-    } */
-
-    .header-format {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .section-format {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-}

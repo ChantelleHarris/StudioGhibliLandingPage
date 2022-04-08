@@ -178,5 +178,3 @@ function addClass() {
             navigationBar.lastChild.children[0].classList.remove('connect-active');
     } 
 });
-
-console.log(window.innerWidth)

@@ -1,0 +1,16 @@
+@media(min-width: 851px) and (max-width: 999px) {
+
+    .header-format {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-format {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

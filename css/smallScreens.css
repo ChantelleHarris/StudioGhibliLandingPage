@@ -1,0 +1,25 @@
+@media(min-width: 300px) and (max-width: 850px) {
+    
+    #nav {
+        display: grid;
+        grid-template-areas: 
+        "item1 item3 item5"
+        "item2 item4 item6";
+        justify-items: center;
+        align-items: center;
+    }
+
+    .header-format {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-format {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
