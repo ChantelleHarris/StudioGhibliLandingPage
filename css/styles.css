@@ -77,6 +77,59 @@ figcaption a:focus {
     background-color: rgb(0,38,39);
 }
 
+.quotes {
+    width: 100vw;
+    height: 10vh;
+    border: none;
+    border-radius: unset;
+}
+
+.quotes p {
+    font-size: 15px;
+    font-family: normal;
+}
+
+.quotes:hover {
+    background-color: #9bbdb9;
+}
+
+.quotes:active{
+    background-color: rgb(0,38,39);
+    color: rgb(245, 241, 230);
+}
+
+.quote-content {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20, 0, 39);
+}
+
+.quote-content hr {
+    width: 40vw;
+}
+
+.quote-content blockquote {
+    margin-bottom: 0;
+}
+
+.quote-content p {
+    margin-bottom: 0;
+    letter-spacing: 0.5em;
+    text-shadow: 0px 0px 8px white;
+}
+
+.quote-content span {
+    letter-spacing: 0.5em;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.show-quote {
+    display: flex;
+}
+
 /* NAVIGATION */ /* NAVIGATION */ /* NAVIGATION */
 
 #nav {
@@ -257,6 +310,20 @@ img {
     background-color: rgb(222,172,171);
 }
 
+.intro p a {
+    color: #0f3235;
+}
+
+.intro p a:hover {
+    color: #a4623e;
+    transition: all 0.3s ease-out;
+}
+
+.intro p a:focus {
+    color: #367e9e;
+    transition: all 0.3s ease-out;
+}
+
 .howl {
     background-color: rgb(0,38,39);  
 }
@@ -370,7 +437,7 @@ footer form label input:focus,textarea:focus {
 footer form button {
     padding-left: 10px;
     padding-right: 10px;
-    background-color: rgb(220,228,207);
+    background-color: rgb(207, 228, 220);
 }
 
 footer form button:hover {

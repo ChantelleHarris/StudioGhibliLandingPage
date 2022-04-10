@@ -71,9 +71,6 @@ for(let i = 0; i < sectionTitlesArray.length - 1; i++) {
     //This formats the random number-letter combination and saves that format into a variable
     let randomId = `${generateId}`;
 
-    //This generates a random id for each link
-    // let selectId = navigationBar.children[i].children[0].id = randomId;
-
     //This grabs that id and sets it as the target of the links
     navigationBar.children[i].children[0].setAttribute("href",`#${randomId}`);
 
@@ -178,3 +175,25 @@ function addClass() {
             navigationBar.lastChild.children[0].classList.remove('connect-active');
     } 
 });
+
+
+// window.addEventListener('scroll', function addClass() {
+//     for(let i = 0; i < sectionTitlesArray.length; i++) {
+
+//     }
+// })
+
+// let aTags = document.getElementsByTagName('a');
+// let aTagsArray = Array.from(aTags);
+// console.log(aTagsArray)
+
+//This makes the quote button content appear and collapse
+//I didn't like the idea of collapsible main sections
+let buttons = document.getElementsByClassName('quotes');
+let clicked;
+for(let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function showQuotes() {
+        let quotes = document.getElementsByClassName('quote-content');
+            quotes[i].classList.toggle('show-quote');  
+    })
+}
