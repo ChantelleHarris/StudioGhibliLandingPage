@@ -97,8 +97,10 @@ let aTagsArray = Array.from(aTags);
 for(let i = 0; i < aTagsArray.length; i++) {
     aTagsArray[i].addEventListener('click', function scrollSmooth(e) {
         e.preventDefault();
+        let clicked;
         let sectionsTop = sectionTitlesArray[i].getBoundingClientRect().top;
-        window.scroll({top: `${sectionsTop}`, behavior: "smooth"})
+        window.scroll({top: `${sectionsTop}`, behavior: "smooth"});
+        aTagsArray[i].classList.toggle('click-active');
     })
 }
 
@@ -108,12 +110,14 @@ window.addEventListener('scroll', function addClass() {
         let boundary = sectionTitlesArray[i].getBoundingClientRect();
         if (boundary.top >= 0 && boundary.left >= 0 && boundary.right <= window.innerWidth && boundary.bottom <= window.innerHeight) {
             navigationBar.children[i].children[0].classList.add('active');
+            sectionTitlesArray[i].classList.add('active');
         } else {
             navigationBar.children[i].children[0].classList.remove('active');
+            sectionTitlesArray[i].classList.remove('active');
         }
     }
 })
-
+/*
 //Adds active class when section is in viewport for all but the Connect section:MEDIUM SCREENS
 if (window.matchMedia("(min-width: 851px) and (max-width: 999px)").matches) {
     for(let i = 0; i < sectionTitlesArray.length - 1; i ++) {
@@ -137,13 +141,14 @@ if (window.matchMedia("(min-width: 300px) and (max-width: 850px)").matches) {
         }
     }
 }
-
+*/
 //Adds active class for Connect section(it has different styling)
 window.addEventListener('scroll', function addClass() {
     let connect = document.querySelector('[data-nav="Connect"]');
     let connectInViewport = connect.getBoundingClientRect();
     if (connectInViewport.top >= 0 && connectInViewport.left >= 0 && connectInViewport.right <= window.innerWidth && connectInViewport.bottom <= window.innerHeight) {
         navigationBar.lastChild.children[0].classList.add('connect-active');
+        
     }   else {
             navigationBar.lastChild.children[0].classList.remove('connect-active');
     } 
@@ -177,3 +182,4 @@ console.log("Height is " + window.innerHeight);
 //         }
     
 // }
+console.log(sectionTitlesArray.lastChild[0])

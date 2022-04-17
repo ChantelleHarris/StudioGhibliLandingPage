@@ -190,6 +190,20 @@ nav li a:hover {
     transition: all 0.3s ease-out;
 }
 
+.click-active {
+    border: 2px solid #225064;
+    border-radius: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #225064;
+    background-color: #DF8453;
+    transition: all 0.3s ease-out;
+}
+
+.section-active {
+    border: 20px solid black;
+}
+
 /* HEADER */ /* HEADER */ /* HEADER */ /* HEADER */
 
 /* TITLE ANIMATION */
@@ -256,6 +270,10 @@ nav li a:hover {
     justify-content: center;
     border-top: 1px solid rgb(245, 241, 230);
     padding: 40px;
+}
+
+p {
+    overflow: hidden;
 }
 
 .content-wrapper {
