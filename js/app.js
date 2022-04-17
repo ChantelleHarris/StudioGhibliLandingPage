@@ -165,9 +165,9 @@ for(let i = 0; i < buttons.length; i++) {
     })
 }
 
-console.log(sectionTitlesArray[0].getBoundingClientRect());
-console.log("Width is " + window.innerWidth);
-console.log("Height is " + window.innerHeight);
+// console.log(sectionTitlesArray[0].getBoundingClientRect());
+// console.log("Width is " + window.innerWidth);
+// console.log("Height is " + window.innerHeight);
 
 //This specifically targets section 1, Introduction, because its too long to meet all of the viewport
 //conditions--so, I have to modify the conditions for it to register responsively
@@ -182,4 +182,3 @@ console.log("Height is " + window.innerHeight);
 //         }
     
 // }
-console.log(sectionTitlesArray.lastChild[0])
