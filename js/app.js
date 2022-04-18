@@ -102,9 +102,9 @@ for(let i = 0; i < buttons.length; i++) {
 
 
 //Adds active class using the Intersection Observer API when section is in viewport for all but the Connect section, the footer
-for(let i = 0; i < sectionTitlesArray.length-1; i++) {
+for(let i = 0; i < sectionTitlesArray.length - 1; i++) {
     //Sets the options for the Intersection Observer
-    const options = {
+    const rules = {
         root: null, //the browser, by default, is the root and grandparent of the sections
         threshold: 0.3, //activate when a section is 30% visible
         rootMargin: "0px", //do not extend or shrink the viewport
@@ -123,7 +123,7 @@ for(let i = 0; i < sectionTitlesArray.length-1; i++) {
             navigationBar.children[i].children[0].classList.remove('active');
         }
         
-    }, options);
+    }, rules);
 
     //Tells the observer to observe every section
     observeSection.observe(sectionTitlesArray[i]);
@@ -132,7 +132,7 @@ for(let i = 0; i < sectionTitlesArray.length-1; i++) {
 
 //Adds active class for Connect section (it has different styling)
 let connect = document.querySelector('[data-nav="Connect"]');
-const options = {
+const rules = {
     root: null,
     threshold: 0.3,
     rootMargin: "0px",
@@ -146,7 +146,7 @@ const observeSection = new IntersectionObserver(function addClass(entries) {
         navigationBar.lastChild.children[0].classList.remove('connect-active');
     }
 
-}, options);
+}, rules);
 observeSection.observe(connect);
 
 
