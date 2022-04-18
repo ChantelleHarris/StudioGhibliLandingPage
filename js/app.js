@@ -100,7 +100,7 @@ for(let i = 0; i < aTagsArray.length; i++) {
         let clicked;
         let sectionsTop = sectionTitlesArray[i].getBoundingClientRect().top;
         window.scroll({top: `${sectionsTop}`, behavior: "smooth"});
-        aTagsArray[i].classList.toggle('click-active');
+        // aTagsArray[i].classList.toggle('click-active');
     })
 }
 
