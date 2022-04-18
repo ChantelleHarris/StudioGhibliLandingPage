@@ -88,10 +88,82 @@ appendLastItem();
 
 
 
+//This makes the quote button content appear and collapse
+//I didn't like the idea of collapsible main sections
+let buttons = document.getElementsByClassName('quotes');
+let clicked;
+for(let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function showQuotes() {
+        let quotes = document.getElementsByClassName('quote-content');
+        quotes[i].classList.toggle('show-quote');  
+    })
+}
+
+
+
+//Adds active class using the Intersection Observer API when section is in viewport for all but the Connect section, the footer
+for(let i = 0; i < sectionTitlesArray.length-1; i++) {
+    //Sets the options for the Intersection Observer
+    const options = {
+        root: null, //the browser, by default, is the root and grandparent of the sections
+        threshold: 0.3, //activate when a section is 30% visible
+        rootMargin: "0px", //do not extend or shrink the viewport
+    }
+
+    //Declares the Intersection observer with 2 arguments, function addClass(entries) and options
+    const observeSection = new IntersectionObserver(function addClass(entries) {
+        //saves the entry array into a variable
+        const [entry] = entries;
+        // console.log(entry);
+    
+        //adds class if the section is intersecting or within viewport
+        if (entry.isIntersecting) {
+            navigationBar.children[i].children[0].classList.add('active');
+        } else {
+            navigationBar.children[i].children[0].classList.remove('active');
+        }
+        
+    }, options);
+
+    //Tells the observer to observe every section
+    observeSection.observe(sectionTitlesArray[i]);
+}
+
+
+//Adds active class for Connect section (it has different styling)
+let connect = document.querySelector('[data-nav="Connect"]');
+const options = {
+    root: null,
+    threshold: 0.3,
+    rootMargin: "0px",
+}
+const observeSection = new IntersectionObserver(function addClass(entries) {    
+    const [entry] = entries;
+
+    if (entry.isIntersecting) {
+        navigationBar.lastChild.children[0].classList.add('connect-active');
+    } else {
+        navigationBar.lastChild.children[0].classList.remove('connect-active');
+    }
+
+}, options);
+observeSection.observe(connect);
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 //Selects the anchors of the navigation bar by class and converts the given HTML Collection to an array
 let aTags = document.getElementsByClassName('nav-anchors');
 let aTagsArray = Array.from(aTags);
-
 
 //Sets smooth scrolling behavior for each anchor click
 for(let i = 0; i < aTagsArray.length; i++) {
@@ -100,7 +172,8 @@ for(let i = 0; i < aTagsArray.length; i++) {
         let clicked;
         let sectionsTop = sectionTitlesArray[i].getBoundingClientRect().top;
         window.scroll({top: `${sectionsTop}`, behavior: "smooth"});
-        // aTagsArray[i].classList.toggle('click-active');
+        aTagsArray[i].classList.add('click-active');
+    
     })
 }
 
@@ -117,31 +190,7 @@ window.addEventListener('scroll', function addClass() {
         }
     }
 })
-/*
-//Adds active class when section is in viewport for all but the Connect section:MEDIUM SCREENS
-if (window.matchMedia("(min-width: 851px) and (max-width: 999px)").matches) {
-    for(let i = 0; i < sectionTitlesArray.length - 1; i ++) {
-        let boundary = sectionTitlesArray[i].getBoundingClientRect();
-        if (boundary.top >= 0 && boundary.left >= 0 && boundary.right <= window.innerWidth && boundary.bottom <= window.innerHeight) {
-            navigationBar.children[i].children[0].classList.add('active');
-        } else {
-            navigationBar.children[i].children[0].classList.remove('active');
-        }
-    }
-}
 
-//Adds active class when section is in viewport for all but the Connect section:SMALL SCREENS
-if (window.matchMedia("(min-width: 300px) and (max-width: 850px)").matches) {
-    for(let i = 0; i < sectionTitlesArray.length - 1; i ++) {
-        let boundary = sectionTitlesArray[i].getBoundingClientRect();
-        if (boundary.top >= 0 && boundary.left >= 0 && boundary.right <= window.innerWidth && boundary.bottom <= window.innerHeight) {
-            navigationBar.children[i].children[0].classList.add('active');
-        } else {
-            navigationBar.children[i].children[0].classList.remove('active');
-        }
-    }
-}
-*/
 //Adds active class for Connect section(it has different styling)
 window.addEventListener('scroll', function addClass() {
     let connect = document.querySelector('[data-nav="Connect"]');
@@ -153,32 +202,4 @@ window.addEventListener('scroll', function addClass() {
             navigationBar.lastChild.children[0].classList.remove('connect-active');
     } 
 });
-
-//This makes the quote button content appear and collapse
-//I didn't like the idea of collapsible main sections
-let buttons = document.getElementsByClassName('quotes');
-let clicked;
-for(let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function showQuotes() {
-        let quotes = document.getElementsByClassName('quote-content');
-        quotes[i].classList.toggle('show-quote');  
-    })
-}
-
-// console.log(sectionTitlesArray[0].getBoundingClientRect());
-// console.log("Width is " + window.innerWidth);
-// console.log("Height is " + window.innerHeight);
-
-//This specifically targets section 1, Introduction, because its too long to meet all of the viewport
-//conditions--so, I have to modify the conditions for it to register responsively
-
-// if (window.matchMedia("(min-width: 300px) and (max-width: 850px)").matches) {
-//     let section1 = sectionTitlesArray[0];
-//     let section1Boundary = section1.getBoundingClientRect();
-//         if (section1Boundary.top >= 0 && section1Boundary.left >= 0 && section1Boundary.right <= window.innerWidth) {
-//             section1.classList.add('active');
-//         } else {
-//             section1.classList.remove('active');
-//         }
-    
-// }
+*/
