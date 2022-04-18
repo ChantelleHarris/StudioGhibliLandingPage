@@ -31,4 +31,5 @@ I chose to make my page about Studio Ghibli because it lives in a special place 
 
 [Back to Top](#studio-ghibli-landing-page-project)
 
-For this project, I rely heavily on the notes I've taken from the course material and Google.
+For this project, I rely heavily on the notes I've taken from the course material, Google, MDN Docs, Stack Overflow
+Hackernoon, & CSS tricks.
